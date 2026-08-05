@@ -168,4 +168,3 @@ export async function downloadPptx() {
   await pptx.writeFile({ fileName: "Signal-Desk-ZEEX-Proposal.pptx" });
 }
 
-export { default as PptxCtor } from "pptxgenjs";
