@@ -129,8 +129,9 @@ export function buildPresentation() {
         ],
         {
           x: 0.5, y: 1.1, w: 9, fontFace: "Arial", border: { pt: 0.5, color: "D8DEE7" },
-          margin: 6, valign: "top", autoPage: true, autoPageRepeatHeader: true,
+          margin: 6, valign: "top",
         },
+
       );
     }
   }
