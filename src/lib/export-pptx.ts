@@ -86,55 +86,59 @@ export function buildPresentation() {
 
     if (bullets.length) {
       slide.addText(
-        bullets.slice(0, 5).map((t) => ({
-          text: trim(t),
-          options: { bullet: { code: "25AA" }, fontSize: 12, color: "24303F", paraSpaceAfter: 9 },
+        bullets.slice(0, 4).map((t) => ({
+          text: trim(t, 200),
+          options: { bullet: { code: "25AA" }, fontSize: 12, color: "24303F", paraSpaceAfter: 9, breakLine: true },
         })),
-        { x: 0.6, y: 1.6, w: 8.8, h: quote ? 2.6 : 3.5, fontFace: "Arial", valign: "top" },
+        { x: 0.6, y: 1.6, w: 8.8, h: quote ? 2.5 : 3.5, fontFace: "Arial", valign: "top" },
       );
     }
 
     if (quote) {
       slide.addShape("rect", { x: 0.6, y: 4.35, w: 8.8, h: 0.9, fill: { color: LIGHT } });
       slide.addShape("rect", { x: 0.6, y: 4.35, w: 0.06, h: 0.9, fill: { color: AZURE } });
-      slide.addText(trim(quote, 260), {
+      slide.addText(trim(quote, 230), {
         x: 0.85, y: 4.4, w: 8.4, h: 0.8, fontFace: "Georgia", fontSize: 11,
         italic: true, color: NAVY_MID, valign: "middle",
       });
     }
 
     for (const table of tables) {
-      const ts = pptx.addSlide();
-      ts.background = { color: WHITE };
-      ts.addShape("rect", { x: 0, y: 0, w: 10, h: 0.85, fill: { color: NAVY } });
-      ts.addText(`${section.title}`, {
-        x: 0.55, y: 0.2, w: 8.9, h: 0.45, fontFace: "Georgia", fontSize: 19, bold: true, color: WHITE,
-      });
-      ts.addTable(
-        [
-          table.head.map((h) => ({
-            text: h,
-            options: { bold: true, color: WHITE, fill: { color: NAVY_MID }, fontSize: 11 },
-          })),
-          ...table.rows.map((row, i) =>
-            row.map((cell) => ({
-              text: trim(cell, 220),
-              options: {
-                fontSize: 10,
-                color: "24303F",
-                fill: { color: i % 2 ? LIGHT : WHITE },
-              },
+      const chunks: string[][][] = [];
+      for (let i = 0; i < table.rows.length; i += 3) chunks.push(table.rows.slice(i, i + 3));
+      chunks.forEach((chunk, ci) => {
+        const ts = pptx.addSlide();
+        ts.background = { color: WHITE };
+        ts.addShape("rect", { x: 0, y: 0, w: 10, h: 0.85, fill: { color: NAVY } });
+        ts.addText(chunks.length > 1 ? `${section.title} (${ci + 1}/${chunks.length})` : section.title, {
+          x: 0.55, y: 0.2, w: 8.9, h: 0.45, fontFace: "Georgia", fontSize: 19, bold: true, color: WHITE,
+        });
+        ts.addTable(
+          [
+            table.head.map((h) => ({
+              text: h,
+              options: { bold: true, color: WHITE, fill: { color: NAVY_MID }, fontSize: 11 },
             })),
-          ),
-        ],
-        {
-          x: 0.5, y: 1.1, w: 9, fontFace: "Arial", border: { pt: 0.5, color: "D8DEE7" },
-          margin: 6, valign: "top",
-        },
-
-      );
+            ...chunk.map((row, i) =>
+              row.map((cell) => ({
+                text: trim(cell, 200),
+                options: {
+                  fontSize: 10,
+                  color: "24303F",
+                  fill: { color: i % 2 ? LIGHT : WHITE },
+                },
+              })),
+            ),
+          ],
+          {
+            x: 0.5, y: 1.1, w: 9, fontFace: "Arial", border: { pt: 0.5, color: "D8DEE7" },
+            margin: 6, valign: "top",
+          },
+        );
+      });
     }
   }
+
 
   // Contact
   const last = pptx.addSlide();
@@ -149,13 +153,14 @@ export function buildPresentation() {
   });
   last.addText(
     [
-      { text: contact.role, options: { fontSize: 14, color: "D6E2F2", paraSpaceAfter: 6 } },
-      { text: contact.assignment, options: { fontSize: 13, color: "9DB4D6", paraSpaceAfter: 14 } },
-      { text: contact.email, options: { fontSize: 14, color: WHITE, paraSpaceAfter: 4 } },
-      { text: `${contact.mobile}  (Mobile / WhatsApp)`, options: { fontSize: 14, color: WHITE } },
+      { text: contact.role, options: { fontSize: 14, color: "D6E2F2", paraSpaceAfter: 6, breakLine: true } },
+      { text: contact.assignment, options: { fontSize: 13, color: "9DB4D6", paraSpaceAfter: 14, breakLine: true } },
+      { text: contact.email, options: { fontSize: 14, color: WHITE, paraSpaceAfter: 4, breakLine: true } },
+      { text: `${contact.mobile}  (Mobile / WhatsApp)`, options: { fontSize: 14, color: WHITE, breakLine: true } },
     ],
-    { x: 0.8, y: 2.35, w: 8.6, h: 2, fontFace: "Arial" },
+    { x: 0.8, y: 2.35, w: 8.6, h: 2, fontFace: "Arial", valign: "top" },
   );
+
   last.addText(`${meta.firm}  |  ${meta.reference}`, {
     x: 0.8, y: 4.9, w: 8.6, h: 0.3, fontFace: "Arial", fontSize: 10, color: GREY,
   });
