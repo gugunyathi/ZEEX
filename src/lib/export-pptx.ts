@@ -167,3 +167,5 @@ export async function downloadPptx() {
   const pptx = buildPresentation();
   await pptx.writeFile({ fileName: "Signal-Desk-ZEEX-Proposal.pptx" });
 }
+
+export { default as PptxCtor } from "pptxgenjs";
