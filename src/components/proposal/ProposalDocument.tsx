@@ -181,10 +181,16 @@ export function ProposalDocument() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/80 via-navy/85 to-navy-deep" />
           <div className="relative flex h-full flex-col justify-between px-14 py-12">
             <div>
-              <p className="font-sans text-[12px] font-bold tracking-[0.34em] text-white">
-                {meta.firm.toUpperCase()}
-              </p>
-              <p className="mt-2 font-sans text-[11px] tracking-[0.2em] text-white/60 uppercase">
+              <div className="inline-block rounded-sm bg-white px-4 py-3">
+                <img
+                  src={ribbonLogo.url}
+                  alt="Ribbon Protocol logo"
+                  width={428}
+                  height={205}
+                  className="h-11 w-auto"
+                />
+              </div>
+              <p className="mt-3 font-sans text-[11px] tracking-[0.2em] text-white/60 uppercase">
                 {meta.division}
               </p>
             </div>
