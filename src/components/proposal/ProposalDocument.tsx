@@ -1,5 +1,6 @@
 import { meta, contact, sections, type Block, type Section } from "@/data/proposal";
 import coverImg from "@/assets/cover-skyline.jpg";
+import ribbonLogo from "@/assets/ribbon-logo.png.asset.json";
 import smeImg from "@/assets/sme-entrepreneurs.jpg";
 import networkImg from "@/assets/onchain-network.jpg";
 import mobileImg from "@/assets/mobile-access.jpg";
