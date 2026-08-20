@@ -5,13 +5,13 @@ import { ProposalDocument } from "@/components/proposal/ProposalDocument";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tokenized RWAs for ZEEX | Signal Desk Proposal" },
+      { title: "Tokenized RWAs for ZEEX | Ribbon Protocol Proposal" },
       {
         name: "description",
         content:
-          "Signal Desk (Pty) Ltd proposal to ZSE Holdings: onchain capital markets infrastructure, $ZIG stablecoin, global liquidity and Base Ecosystem funding for ZEEX.",
+          "Ribbon Protocol proposal to ZSE Holdings: onchain capital markets infrastructure, $ZIG stablecoin, global liquidity and Base Ecosystem funding for ZEEX.",
       },
-      { property: "og:title", content: "Tokenized RWAs for ZEEX | Signal Desk Proposal" },
+      { property: "og:title", content: "Tokenized RWAs for ZEEX | Ribbon Protocol Proposal" },
       {
         property: "og:description",
         content:

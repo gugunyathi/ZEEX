@@ -1,5 +1,6 @@
 import { meta, contact, sections, type Block, type Section } from "@/data/proposal";
 import coverImg from "@/assets/cover-skyline.jpg";
+import ribbonLogo from "@/assets/ribbon-logo.png.asset.json";
 import smeImg from "@/assets/sme-entrepreneurs.jpg";
 import networkImg from "@/assets/onchain-network.jpg";
 import mobileImg from "@/assets/mobile-access.jpg";
@@ -181,10 +182,16 @@ export function ProposalDocument() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/80 via-navy/85 to-navy-deep" />
           <div className="relative flex h-full flex-col justify-between px-14 py-12">
             <div>
-              <p className="font-sans text-[12px] font-bold tracking-[0.34em] text-white">
-                {meta.firm.toUpperCase()}
-              </p>
-              <p className="mt-2 font-sans text-[11px] tracking-[0.2em] text-white/60 uppercase">
+              <div className="inline-block rounded-sm bg-white px-4 py-3">
+                <img
+                  src={ribbonLogo.url}
+                  alt="Ribbon Protocol logo"
+                  width={428}
+                  height={205}
+                  className="h-11 w-auto"
+                />
+              </div>
+              <p className="mt-3 font-sans text-[11px] tracking-[0.2em] text-white/60 uppercase">
                 {meta.division}
               </p>
             </div>
@@ -265,6 +272,7 @@ export function ProposalDocument() {
               ["Division & Assignment", contact.assignment],
               ["Direct Email", contact.email],
               ["Mobile / WhatsApp", contact.mobile],
+              ["Website", contact.website],
             ].map(([label, value]) => (
               <div key={label}>
                 <dt className="font-sans text-[9.5px] font-semibold tracking-[0.2em] text-white/45 uppercase">

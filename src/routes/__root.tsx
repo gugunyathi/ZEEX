@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Signal Desk — ZEEX Onchain Proposal" },
+      { title: "Ribbon Protocol — ZEEX Onchain Proposal" },
       {
         name: "description",
         content:
-          "Signal Desk (Pty) Ltd proposal to ZSE Holdings for tokenized real world assets on ZEEX.",
+          "Ribbon Protocol proposal to ZSE Holdings for tokenized real world assets on ZEEX.",
       },
-      { name: "author", content: "Signal Desk (Pty) Ltd" },
+      { name: "author", content: "Ribbon Protocol" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
 

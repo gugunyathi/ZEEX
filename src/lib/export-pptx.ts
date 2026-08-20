@@ -156,7 +156,8 @@ export function buildPresentation() {
       { text: contact.role, options: { fontSize: 14, color: "D6E2F2", paraSpaceAfter: 6, breakLine: true } },
       { text: contact.assignment, options: { fontSize: 13, color: "9DB4D6", paraSpaceAfter: 14, breakLine: true } },
       { text: contact.email, options: { fontSize: 14, color: WHITE, paraSpaceAfter: 4, breakLine: true } },
-      { text: `${contact.mobile}  (Mobile / WhatsApp)`, options: { fontSize: 14, color: WHITE, breakLine: true } },
+      { text: `${contact.mobile}  (Mobile / WhatsApp)`, options: { fontSize: 14, color: WHITE, paraSpaceAfter: 4, breakLine: true } },
+      { text: contact.website, options: { fontSize: 14, color: "9DB4D6", breakLine: true } },
     ],
     { x: 0.8, y: 2.35, w: 8.6, h: 2, fontFace: "Arial", valign: "top" },
   );
