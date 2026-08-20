@@ -21,6 +21,7 @@ export const contact = {
     "Frontier Technology Development — Integration Architect & Investment Lead",
   email: "gugu@ribbonprotocol.org",
   mobile: "+27 66 296 8376",
+  website: "https://ribbonprotocol.org",
 };
 
 export type Block =
