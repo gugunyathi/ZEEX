@@ -272,6 +272,7 @@ export function ProposalDocument() {
               ["Division & Assignment", contact.assignment],
               ["Direct Email", contact.email],
               ["Mobile / WhatsApp", contact.mobile],
+              ["Website", contact.website],
             ].map(([label, value]) => (
               <div key={label}>
                 <dt className="font-sans text-[9.5px] font-semibold tracking-[0.2em] text-white/45 uppercase">
