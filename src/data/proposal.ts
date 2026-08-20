@@ -1,10 +1,10 @@
 export const meta = {
-  firm: "Signal Desk (Pty) Ltd",
+  firm: "Ribbon Protocol",
   division: "Frontier Technology Development",
   title: "Tokenized Real World Assets for ZEEX",
   subtitle:
     "A Proposal to ZSE Holdings for Onchain Capital Markets Infrastructure, Global Liquidity and Base Ecosystem Funding",
-  from: "Signal Desk (Pty) Ltd — Frontier Technology Development",
+  from: "Ribbon Protocol — Frontier Technology Development",
   to: "ZSE Holdings — Zimbabwe Entrepreneurship Exchange (ZEEX)",
   role: "Project Manager / Investment Agent & Technology Integration Architect",
   date: "August 2026",
@@ -16,10 +16,10 @@ export const meta = {
 export const contact = {
   heading: "Proposal Lead & Executive Contact",
   name: "Gugu Nyathi",
-  role: "CIO (Chief Information Officer), Signal Desk (Pty) Ltd",
+  role: "CIO (Chief Information Officer), Ribbon Protocol",
   assignment:
     "Frontier Technology Development — Integration Architect & Investment Lead",
-  email: "gugu@signaldesk.co.za",
+  email: "gugu@ribbonprotocol.org",
   mobile: "+27 66 296 8376",
 };
 
@@ -47,7 +47,7 @@ export const sections: Section[] = [
     blocks: [
       {
         kind: "p",
-        text: "Signal Desk (Pty) Ltd proposes a strategic collaboration with ZSE Holdings to extend the newly launched Zimbabwe Entrepreneurship Exchange (ZEEX) onchain, converting securities issued by ZEEX-listed SMEs and startups into tokenized Real World Assets (RWAs) tradable by a global base of investors and digital asset traders.",
+        text: "Ribbon Protocol proposes a strategic collaboration with ZSE Holdings to extend the newly launched Zimbabwe Entrepreneurship Exchange (ZEEX) onchain, converting securities issued by ZEEX-listed SMEs and startups into tokenized Real World Assets (RWAs) tradable by a global base of investors and digital asset traders.",
       },
       {
         kind: "p",
@@ -55,7 +55,7 @@ export const sections: Section[] = [
       },
       {
         kind: "p",
-        text: "Our proposal supplies that demand. Signal Desk brings existing working relationships within Base and Coinbase and will act as ZEEX's project manager, investment agent and technology integration architect to (a) secure non-dilutive grant funding of up to US$250,000 from the Base Ecosystem Fund, (b) raise up to US$3.5 million of seed equity from Base and Coinbase Ventures and aligned funds, and (c) channel liquidity from the Base and Coinbase ecosystem of investors, funds, market makers and traders into tokenized ZEEX instruments.",
+        text: "Our proposal supplies that demand. Ribbon Protocol brings existing working relationships within Base and Coinbase and will act as ZEEX's project manager, investment agent and technology integration architect to (a) secure non-dilutive grant funding of up to US$250,000 from the Base Ecosystem Fund, (b) raise up to US$3.5 million of seed equity from Base and Coinbase Ventures and aligned funds, and (c) channel liquidity from the Base and Coinbase ecosystem of investors, funds, market makers and traders into tokenized ZEEX instruments.",
       },
       {
         kind: "p",
@@ -137,7 +137,7 @@ export const sections: Section[] = [
       },
       {
         kind: "quote",
-        text: "Base is looking for deep domain experts who can originate and responsibly manage real-world assets in under-financialised markets. ZSE Holdings is that domain expert, with regulatory standing no crypto-native team can replicate. Signal Desk supplies the onchain architecture, the funding process and the ecosystem relationships.",
+        text: "Base is looking for deep domain experts who can originate and responsibly manage real-world assets in under-financialised markets. ZSE Holdings is that domain expert, with regulatory standing no crypto-native team can replicate. Ribbon Protocol supplies the onchain architecture, the funding process and the ecosystem relationships.",
       },
     ],
   },
@@ -230,12 +230,12 @@ export const sections: Section[] = [
   },
   {
     number: "06",
-    title: "Signal Desk's Role and Scope of Services",
+    title: "Ribbon Protocol's Role and Scope of Services",
     kicker: "Engagement model",
     blocks: [
       {
         kind: "p",
-        text: "Signal Desk (Pty) Ltd is engaged in three defined capacities, each with its own deliverables and accountability.",
+        text: "Ribbon Protocol is engaged in three defined capacities, each with its own deliverables and accountability.",
       },
       { kind: "h3", text: "6.1 Project Manager" },
       {
@@ -366,13 +366,13 @@ export const sections: Section[] = [
     blocks: [
       {
         kind: "p",
-        text: "Signal Desk proposes a mandate combining a monthly project management retainer, a success fee on capital raised in the investment agent capacity, and a fixed-fee architecture and integration workstream. Precise commercial terms will be tabled for negotiation once scope is confirmed, and can be structured to weight compensation toward successful funding outcomes.",
+        text: "Ribbon Protocol proposes a mandate combining a monthly project management retainer, a success fee on capital raised in the investment agent capacity, and a fixed-fee architecture and integration workstream. Precise commercial terms will be tabled for negotiation once scope is confirmed, and can be structured to weight compensation toward successful funding outcomes.",
       },
       {
         kind: "numbers",
         items: [
           "Executive briefing with ZSE Holdings leadership to confirm strategic intent and scope (1 hour).",
-          "Letter of intent and confidentiality agreement between ZSE Holdings and Signal Desk (Pty) Ltd.",
+          "Letter of intent and confidentiality agreement between ZSE Holdings and Ribbon Protocol.",
           "Two-week joint discovery: regulatory mapping, ZEEX technical review, pilot issuer shortlist.",
           "Submission of the Base Ecosystem Fund grant application with ZSE Holdings as named partner.",
           "Mobilisation of Phase 0 delivery on grant approval.",
